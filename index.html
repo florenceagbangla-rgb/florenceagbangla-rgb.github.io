@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florence Agbangla · Bilingual Freelance Portfolio</title>
+<meta name="description" content="Florence Agbangla · Bilingual Virtual Assistant, SEO Writer, Motion Designer and Social Media Manager based in Lomé, Togo. Available for remote work worldwide.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --forest:    #166534;
+  --forest-md: #15803D;
+  --forest-bg: #F0FDF4;
+  --forest-brd:#BBF7D0;
+  --cuivre:    #92400E;
+  --cuivre-bg: #FEF3C7;
+  --noir:      #0C1A0E;
+  --corps:     #374151;
+  --gris:      #6B7280;
+  --gris-fin:  #E5E7EB;
+  --gris-bg:   #F9FAFB;
+  --blanc:     #FFFFFF;
+}
+html{font-size:10px;scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--blanc);
+  color:var(--noir);
+  line-height:1.5;
+}
+
+/* ── TYPO ── */
+.f{font-family:'Fraunces',Georgia,serif;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--gris-fin);
+  padding:0 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  height:5.6rem;
+}
+.nav-name{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.5rem;font-weight:700;
+  color:var(--forest);
+  letter-spacing:-0.01em;
+}
+.nav-links{display:flex;gap:2.8rem;}
+.nav-links a{
+  font-size:1rem;font-weight:500;
+  color:var(--corps);
+  text-decoration:none;
+  transition:color .15s;
+}
+.nav-links a:hover{color:var(--forest);}
+.nav-cta{
+  background:var(--forest);color:#fff;
+  font-size:0.95rem;font-weight:600;
+  padding:0.7rem 1.8rem;
+  border-radius:0.4rem;
+  text-decoration:none;
+  transition:background .15s;
+}
+.nav-cta:hover{background:var(--forest-md);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  padding:13rem 5% 8rem;
+  display:grid;
+  grid-template-columns:1fr 42rem;
+  gap:4rem;
+  align-items:center;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.hero-tag{
+  font-size:0.85rem;font-weight:500;
+  color:var(--forest);
+  letter-spacing:0.04em;
+  margin-bottom:1.6rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.hero-tag::before{
+  content:'';
+  display:block;width:2.4rem;height:1.5px;
+  background:var(--forest);
+}
+
+h1.hero-name{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(3.8rem,6vw,6.4rem);
+  font-weight:900;
+  color:var(--noir);
+  line-height:1;
+  letter-spacing:-0.025em;
+  margin-bottom:1.2rem;
+}
+
+.hero-desc{
+  font-size:1.2rem;font-weight:300;
+  color:var(--corps);
+  line-height:1.7;
+  max-width:48rem;
+  margin-bottom:3rem;
+}
+
+.hero-desc em{
+  font-style:italic;
+  font-family:'Fraunces',Georgia,serif;
+  color:var(--noir);
+  font-weight:300;
+}
+
+.hero-actions{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:4rem;}
+
+.btn-primary{
+  background:var(--forest);color:#fff;
+  font-size:1rem;font-weight:600;
+  padding:1rem 2.4rem;
+  border-radius:0.4rem;
+  text-decoration:none;
+  transition:background .15s;
+}
+.btn-primary:hover{background:var(--forest-md);}
+
+.btn-secondary{
+  background:transparent;
+  color:var(--forest);
+  font-size:1rem;font-weight:600;
+  padding:1rem 2.4rem;
+  border-radius:0.4rem;
+  text-decoration:none;
+  border:1.5px solid var(--forest);
+  transition:all .15s;
+}
+.btn-secondary:hover{background:var(--forest-bg);}
+
+.hero-langs{
+  display:flex;gap:0.6rem;flex-wrap:wrap;
+}
+.lang-chip{
+  font-size:0.85rem;font-weight:500;
+  padding:0.3rem 0.9rem;
+  border-radius:2rem;
+  background:var(--gris-bg);
+  color:var(--corps);
+  border:1px solid var(--gris-fin);
+}
+.lang-chip.active{
+  background:var(--forest-bg);
+  color:var(--forest);
+  border-color:var(--forest-brd);
+}
+
+/* Stats hero droite */
+.hero-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
+}
+
+.stat-block{
+  background:var(--gris-bg);
+  border:1px solid var(--gris-fin);
+  border-radius:0.8rem;
+  padding:2.4rem 2rem;
+}
+
+.stat-block.accent{
+  background:var(--forest);
+  border-color:var(--forest);
+}
+
+.stat-num{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:4rem;
+  font-weight:900;
+  line-height:1;
+  color:var(--forest);
+  margin-bottom:0.4rem;
+  display:block;
+}
+.stat-block.accent .stat-num{color:#fff;}
+
+.stat-label{
+  font-size:0.9rem;
+  font-weight:400;
+  color:var(--gris);
+  line-height:1.3;
+}
+.stat-block.accent .stat-label{color:rgba(255,255,255,0.75);}
+
+/* ── SERVICES ── */
+.services-wrap{background:var(--forest-bg);padding:8rem 5%;}
+.services-inner{max-width:1200px;margin:0 auto;}
+
+.section-eyebrow{
+  font-size:0.85rem;font-weight:500;
+  color:var(--forest);
+  letter-spacing:0.04em;
+  margin-bottom:0.8rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.section-eyebrow::before{
+  content:'';display:block;
+  width:2rem;height:1.5px;
+  background:var(--forest);
+}
+
+h2.section-title{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2.8rem,4vw,4rem);
+  font-weight:700;
+  color:var(--noir);
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  margin-bottom:1.2rem;
+  max-width:56rem;
+}
+
+.section-sub{
+  font-size:1.1rem;font-weight:300;
+  color:var(--corps);
+  max-width:52rem;
+  line-height:1.7;
+  margin-bottom:5rem;
+}
+
+.services-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid var(--forest-brd);
+  border-radius:1rem;
+  overflow:hidden;
+  background:var(--blanc);
+}
+
+.service-row{
+  display:grid;
+  grid-template-columns:5.6rem 1fr;
+  border-bottom:1px solid var(--gris-fin);
+  min-height:16rem;
+}
+
+.service-row:last-child{border-bottom:none;}
+.service-row:nth-child(odd){border-right:1px solid var(--gris-fin);}
+
+.service-num{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.8rem;
+  font-weight:300;
+  color:var(--forest-brd);
+  padding:2.4rem 0 0 2rem;
+  line-height:1;
+}
+
+.service-content{padding:2.4rem 2.8rem 2.4rem 0;}
+
+.service-icon{font-size:2rem;margin-bottom:0.8rem;display:block;}
+
+.service-name{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.5rem;font-weight:700;
+  color:var(--noir);
+  margin-bottom:0.6rem;
+  letter-spacing:-0.01em;
+}
+
+.service-rate{
+  font-size:0.85rem;font-weight:600;
+  color:var(--forest);
+  margin-bottom:0.8rem;
+}
+
+.service-text{
+  font-size:0.95rem;font-weight:300;
+  color:var(--corps);
+  line-height:1.65;
+  margin-bottom:1.2rem;
+}
+
+.service-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.stag{
+  font-size:0.78rem;font-weight:500;
+  padding:0.22rem 0.65rem;
+  border-radius:0.25rem;
+  background:var(--forest-bg);
+  color:var(--forest);
+}
+
+/* ── ABOUT ── */
+.about-wrap{padding:8rem 5%;max-width:1200px;margin:0 auto;}
+.about-grid{display:grid;grid-template-columns:1fr 38rem;gap:6rem;align-items:start;}
+
+.about-text p{
+  font-size:1.1rem;font-weight:300;
+  color:var(--corps);
+  line-height:1.8;
+  margin-bottom:1.6rem;
+  max-width:54rem;
+}
+
+.about-text p:last-child{margin-bottom:0;}
+
+.about-text p strong{font-weight:600;color:var(--noir);}
+
+/* Timeline */
+.timeline{margin-top:1rem;}
+
+.tl-item{
+  display:grid;
+  grid-template-columns:9rem 1fr;
+  gap:1.6rem;
+  padding-bottom:2rem;
+  margin-bottom:0;
+  position:relative;
+}
+
+.tl-item::after{
+  content:'';
+  position:absolute;
+  left:calc(9rem + 0.8rem + 7px);
+  top:1.2rem;bottom:0;
+  width:1px;
+  background:var(--gris-fin);
+}
+
+.tl-item:last-child::after{display:none;}
+
+.tl-date{
+  font-size:0.82rem;font-weight:600;
+  color:var(--gris);
+  padding-top:0.15rem;
+  text-align:right;
+}
+
+.tl-content{
+  padding-left:2rem;
+  position:relative;
+}
+
+.tl-content::before{
+  content:'';
+  position:absolute;
+  left:-0.85rem;top:0.5rem;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--forest);
+  border:2px solid var(--blanc);
+  box-shadow:0 0 0 1.5px var(--forest);
+}
+
+.tl-role{font-size:0.95rem;font-weight:600;color:var(--noir);margin-bottom:0.15rem;}
+.tl-org{font-size:0.85rem;font-weight:400;color:var(--gris);}
+
+/* ── CERTIFICATIONS ── */
+.certs-wrap{background:var(--gris-bg);padding:8rem 5%;border-top:1px solid var(--gris-fin);}
+.certs-inner{max-width:1200px;margin:0 auto;}
+
+.certs-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+  margin-top:4rem;
+}
+
+.cert-card{
+  background:var(--blanc);
+  border:1px solid var(--gris-fin);
+  border-radius:0.6rem;
+  padding:1.8rem;
+}
+
+.cert-src{
+  display:flex;align-items:center;gap:0.7rem;
+  margin-bottom:1rem;
+}
+
+.cert-badge{
+  width:2.8rem;height:2.8rem;
+  border-radius:0.4rem;
+  font-size:0.7rem;font-weight:800;
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.cert-badge.hs{background:#FF7A59;}
+.cert-badge.sr{background:#FF642D;}
+.cert-badge.fa{background:var(--forest);}
+
+.cert-src-name{font-size:0.8rem;font-weight:600;color:var(--gris);}
+
+.cert-name{
+  font-size:0.95rem;font-weight:600;
+  color:var(--noir);
+  line-height:1.35;
+  margin-bottom:0.4rem;
+}
+
+.cert-validity{
+  font-size:0.78rem;
+  color:var(--forest);
+  font-weight:500;
+}
+
+/* ── CONTACT ── */
+.contact-wrap{
+  padding:8rem 5%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:start;
+}
+
+.contact-left p{
+  font-size:1.1rem;font-weight:300;
+  color:var(--corps);
+  line-height:1.75;
+  margin-bottom:2rem;
+  max-width:44rem;
+}
+
+.contact-methods{display:flex;flex-direction:column;gap:1.2rem;}
+
+.contact-item{
+  display:flex;align-items:center;gap:1.2rem;
+  font-size:1rem;font-weight:400;
+  color:var(--corps);
+  text-decoration:none;
+}
+
+.contact-item:hover{color:var(--forest);}
+
+.contact-icon{
+  width:3.6rem;height:3.6rem;
+  background:var(--forest-bg);
+  border:1px solid var(--forest-brd);
+  border-radius:0.5rem;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  flex-shrink:0;
+}
+
+/* CTA box */
+.cta-box{
+  background:var(--forest);
+  border-radius:1rem;
+  padding:3.2rem;
+  color:#fff;
+}
+
+.cta-box h3{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.8rem;font-weight:700;
+  margin-bottom:1rem;
+  line-height:1.2;
+}
+
+.cta-box p{
+  font-size:1rem;font-weight:300;
+  color:rgba(255,255,255,0.8);
+  line-height:1.7;
+  margin-bottom:2rem;
+}
+
+.cta-box .platforms{
+  display:flex;flex-direction:column;gap:0.8rem;
+  margin-bottom:2rem;
+}
+
+.platform-link{
+  display:flex;align-items:center;gap:1rem;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:0.5rem;
+  padding:1rem 1.4rem;
+  text-decoration:none;
+  color:#fff;
+  font-size:0.95rem;font-weight:500;
+  transition:background .15s;
+}
+
+.platform-link:hover{background:rgba(255,255,255,0.18);}
+
+.platform-icon{font-size:1.3rem;}
+
+.avail-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  font-size:0.82rem;font-weight:600;
+  padding:0.4rem 1rem;
+  border-radius:2rem;
+  background:rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.85);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.avail-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#86EFAC;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:0.4;}
+}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--gris-fin);
+  padding:2.4rem 5%;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+
+.footer-name{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--forest);
+}
+
+.footer-copy{
+  font-size:0.85rem;color:var(--gris);
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:10rem;}
+  .hero-stats{grid-template-columns:repeat(2,1fr);}
+  .services-list{grid-template-columns:1fr;}
+  .service-row:nth-child(odd){border-right:none;border-bottom:1px solid var(--gris-fin);}
+  .about-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .certs-grid{grid-template-columns:1fr 1fr;}
+  nav .nav-links{display:none;}
+}
+
+@media(max-width:560px){
+  .hero-stats{grid-template-columns:1fr 1fr;}
+  .certs-grid{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Florence A.</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Hire me</a>
+</nav>
+
+<!-- HERO -->
+<section style="max-width:1200px;margin:0 auto;padding:0 5%;">
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag reveal">Lomé, Togo · Available worldwide · 100% remote</div>
+    <h1 class="hero-name reveal">Florence<br>Agbangla</h1>
+    <p class="hero-desc reveal">
+      Bilingual freelancer with <em>nine years</em> of experience across virtual assistance, SEO writing, motion design and social media management. I have worked with clients in Togo, India and the United States. I deliver on time, I read briefs carefully, and I do not need follow-up to get things done.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn-primary">Work with me</a>
+      <a href="#services" class="btn-secondary">See my services</a>
+    </div>
+    <div class="hero-langs reveal">
+      <span class="lang-chip active">French · Native</span>
+      <span class="lang-chip active">English · Professional</span>
+      <span class="lang-chip">Spanish · Basic</span>
+      <span class="lang-chip">German · Basic</span>
+    </div>
+  </div>
+
+  <div class="hero-stats reveal">
+    <div class="stat-block accent">
+      <span class="stat-num">9</span>
+      <div class="stat-label">years of professional experience</div>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">16</span>
+      <div class="stat-label">active certifications in SEO and digital</div>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">6</span>
+      <div class="stat-label">organisations worked across, Togo</div>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">4</span>
+      <div class="stat-label">service areas, one freelancer</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-wrap">
+  <div class="services-inner">
+    <div class="section-eyebrow reveal">What I do</div>
+    <h2 class="section-title reveal">Four services,<br>one reliable person.</h2>
+    <p class="section-sub reveal">Each service stands on its own. Combined, they give you a freelancer who can write the article, produce the video, manage the account and handle the admin — without you coordinating between five different people.</p>
+
+    <div class="services-list reveal">
+
+      <div class="service-row">
+        <div class="service-num">01</div>
+        <div class="service-content">
+          <span class="service-icon">💼</span>
+          <div class="service-name">Virtual Assistant</div>
+          <div class="service-rate">From $8 / hour</div>
+          <p class="service-text">Agenda management, email handling, data entry, document drafting, meeting notes and research — in French and English. Nine years of director-level administrative support in demanding institutional environments.</p>
+          <div class="service-tags">
+            <span class="stag">Calendar management</span>
+            <span class="stag">Inbox handling</span>
+            <span class="stag">Data entry</span>
+            <span class="stag">Document drafting</span>
+            <span class="stag">Transcription</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">02</div>
+        <div class="service-content">
+          <span class="service-icon">✍️</span>
+          <div class="service-name">SEO Writer</div>
+          <div class="service-rate">From $10 / hour</div>
+          <p class="service-text">Articles structured to rank on Google and get cited by AI tools like ChatGPT and Perplexity. Certified in GEO, AEO, AI Search and Content Marketing. Keyword research included, in French or English.</p>
+          <div class="service-tags">
+            <span class="stag">SEO articles FR / EN</span>
+            <span class="stag">GEO optimisation</span>
+            <span class="stag">Keyword research</span>
+            <span class="stag">Content audit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">03</div>
+        <div class="service-content">
+          <span class="service-icon">🎬</span>
+          <div class="service-name">Motion Designer</div>
+          <div class="service-rate">From $10 / hour</div>
+          <p class="service-text">Advertising videos, animated graphics, branded visual assets and graphic overlays for social media. Nine years of continuous practice with local and international clients.</p>
+          <div class="service-tags">
+            <span class="stag">Ad videos</span>
+            <span class="stag">Animated text</span>
+            <span class="stag">Social media visuals</span>
+            <span class="stag">Brand assets</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-num">04</div>
+        <div class="service-content">
+          <span class="service-icon">📱</span>
+          <div class="service-name">Social Media Manager</div>
+          <div class="service-rate">From $8 / hour</div>
+          <p class="service-text">Editorial calendar, post visuals, caption writing and community management for Instagram, LinkedIn and Facebook. Content in French and English, adapted to each platform's real rhythm.</p>
+          <div class="service-tags">
+            <span class="stag">Editorial calendar</span>
+            <span class="stag">Post visuals</span>
+            <span class="stag">Caption writing</span>
+            <span class="stag">Community management</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-wrap">
+  <div class="about-grid">
+    <div>
+      <div class="section-eyebrow reveal">Background</div>
+      <h2 class="section-title reveal" style="font-size:clamp(2.4rem,3.5vw,3.4rem);">Nine years across six organisations.</h2>
+
+      <div class="about-text reveal">
+        <p>I started at the <strong>Ministère du Commerce du Togo</strong> in 2017, handling official administrative acts and correspondence. Since then I have worked at Sogesti Informatique — where I set up the company's entire document management system and accounting framework from the ground up — at Moov Togo, at UPS International and at Megatram SARL as assistant to the Director General.</p>
+        <p>Since 2021 I have been at the <strong>CAMEG</strong>, Togo's national pharmaceutical procurement agency, managing administrative documentation for a <strong>World Bank-funded programme</strong>. In parallel, I have developed my digital skills through 16 certified courses and freelance work with clients in India and the United States.</p>
+        <p>I work best with a written brief, clear deliverables and the autonomy to produce without daily check-ins. I take initiative within the scope I am given and ask when something is unclear rather than guessing.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-eyebrow reveal">Career timeline</div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-date">2021 · now</div>
+          <div class="tl-content">
+            <div class="tl-role">Secretary · Billing · SEO freelancer</div>
+            <div class="tl-org">CAMEG · World Bank / UGP-Togo</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2020 · 2021</div>
+          <div class="tl-content">
+            <div class="tl-role">Assistant to the Director General</div>
+            <div class="tl-org">MEGATRAM SARL</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2019 · 2020</div>
+          <div class="tl-content">
+            <div class="tl-role">Accounting Assistant</div>
+            <div class="tl-org">UPS Togo International</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2019</div>
+          <div class="tl-content">
+            <div class="tl-role">Executive Assistant, Customer Support</div>
+            <div class="tl-org">Atlantique Telecom · Moov Togo</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2018 · 2019</div>
+          <div class="tl-content">
+            <div class="tl-role">Administrative Assistant</div>
+            <div class="tl-org">Groupe Sogesti Informatique</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2017 · 2018</div>
+          <div class="tl-content">
+            <div class="tl-role">Secretary, Central Secretariat</div>
+            <div class="tl-org">Ministère du Commerce du Togo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="certs-wrap">
+  <div class="certs-inner">
+    <div class="section-eyebrow reveal">Credentials</div>
+    <h2 class="section-title reveal">16 active certifications.</h2>
+    <p class="section-sub reveal" style="margin-bottom:0;">All verifiable on request. Issued by Semrush Academy, HubSpot Academy and FreeAcademy, most valid through 2027.</p>
+
+    <div class="certs-grid reveal">
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge sr">SR</div><div class="cert-src-name">Semrush Academy</div></div>
+        <div class="cert-name">AI Search Operating System</div>
+        <div class="cert-validity">Valid until Aug 2027</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge sr">SR</div><div class="cert-src-name">Semrush Academy</div></div>
+        <div class="cert-name">Content Marketing Essentials for SEO &amp; AI Search</div>
+        <div class="cert-validity">Valid until Jul 2027</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge sr">SR</div><div class="cert-src-name">Semrush Academy</div></div>
+        <div class="cert-name">SEO &amp; Content Playbook for Agencies</div>
+        <div class="cert-validity">Andy Crestodina · 2027</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge sr">SR</div><div class="cert-src-name">Semrush Academy</div></div>
+        <div class="cert-name">Content Toolkit Crash Course</div>
+        <div class="cert-validity">Valid until Jul 2027</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge sr">SR</div><div class="cert-src-name">Semrush Academy</div></div>
+        <div class="cert-name">Getting Started with Semrush for Agencies</div>
+        <div class="cert-validity">Valid until Aug 2027</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge fa">FA</div><div class="cert-src-name">FreeAcademy</div></div>
+        <div class="cert-name">Generative Engine Optimization (GEO)</div>
+        <div class="cert-validity">Issued Jul 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge fa">FA</div><div class="cert-src-name">FreeAcademy</div></div>
+        <div class="cert-name">Multimodal AI Basics · Text, Images &amp; Voice</div>
+        <div class="cert-validity">Issued Aug 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge hs">HS</div><div class="cert-src-name">HubSpot Academy</div></div>
+        <div class="cert-name">Marketing de Contenu</div>
+        <div class="cert-validity">HubSpot certified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge hs">HS</div><div class="cert-src-name">HubSpot Academy</div></div>
+        <div class="cert-name">Marketing Digital</div>
+        <div class="cert-validity">HubSpot certified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge hs">HS</div><div class="cert-src-name">HubSpot Academy</div></div>
+        <div class="cert-name">Social Media Marketing I &amp; II</div>
+        <div class="cert-validity">HubSpot certified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge hs">HS</div><div class="cert-src-name">HubSpot Academy</div></div>
+        <div class="cert-name">AEO Fundamentals</div>
+        <div class="cert-validity">HubSpot certified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-src"><div class="cert-badge hs">HS</div><div class="cert-src-name">HubSpot Academy</div></div>
+        <div class="cert-name">Service Hub Software · +3 certifications</div>
+        <div class="cert-validity">All verifiable on request</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-wrap">
+  <div class="section-eyebrow reveal">Get in touch</div>
+  <h2 class="section-title reveal" style="margin-bottom:4rem;">Ready when you are.</h2>
+
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <p>I take on new projects on a rolling basis. Whether you have a one-off task or an ongoing collaboration in mind, the best way to start is a short message describing what you need.</p>
+      <p>I respond within a few hours and can usually start within 24 to 48 hours of agreement on scope and rate.</p>
+
+      <div class="contact-methods">
+        <a href="mailto:florenceagbangla@gmail.com" class="contact-item">
+          <div class="contact-icon">✉️</div>
+          florenceagbangla@gmail.com
+        </a>
+        <a href="tel:+22892025296" class="contact-item">
+          <div class="contact-icon">📞</div>
+          +228 92 02 52 96
+        </a>
+        <a href="mailto:faviflorence@outlook.com" class="contact-item">
+          <div class="contact-icon">📧</div>
+          faviflorence@outlook.com
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-box reveal">
+      <div class="avail-badge" style="margin-bottom:1.6rem;">
+        <span class="avail-dot"></span>
+        Available for new projects
+      </div>
+      <h3>Hire me on Upwork or contact me directly.</h3>
+      <p>I am active on Upwork for hourly and fixed-price contracts. For direct collaboration, email works just as well.</p>
+      <div class="platforms">
+        <a href="https://www.upwork.com" class="platform-link" target="_blank">
+          <span class="platform-icon">💼</span>
+          Find me on Upwork
+        </a>
+        <a href="mailto:florenceagbangla@gmail.com" class="platform-link">
+          <span class="platform-icon">✉️</span>
+          Send a direct email
+        </a>
+      </div>
+      <div style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.55;">
+        Bilingual FR / EN · Lomé, Togo · Available across time zones · Reliable equipment and stable connection
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Florence Agbangla</div>
+  <div class="footer-copy">Virtual Assistant · SEO Writer · Motion Designer · Social Media Manager · Lomé, Togo</div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
